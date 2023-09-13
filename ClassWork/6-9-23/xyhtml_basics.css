@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: skyblue;
+}
+
+.title {
+    text-align: center;
+    text-decoration: underline;
+    padding: 20px;
+    margin: auto;
+}
+
+hr {
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    color: aliceblue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 7px;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+p {
+    padding: 20px;
+    margin-left: 10px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+ol,
+li {
+    margin-left: 20px;
+    padding: 10px;
+}
+
+a {
+    margin-left: 20px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+img {
+    margin: auto;
+    padding: 20px;
+}
+
+table,
+th,
+tr,
+td {
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid;
+}
