@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        border: 1px solid black;
+        padding: 35px;
+        background-image: url(trees-removebg-preview.png);
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+
+    #div1 {
+        background-origin: border-box;
+    }
+
+    #div2 {
+        background-origin: content-box;
+    }
+
+    #div3 {
+        background-origin: padding-box;
+    }
+</style>
+<body>
+    <div id="div1">
+        CSS3 The background-origin Property<br />
+        The background-origin property specifies the positioning area of the background
+        images.<br />
+        The background image can be placed within the content-box, padding-box, or
+        border-box area.
+    </div>
+
+    <div id="div2">
+        CSS3 The background-origin Property<br />
+        The background-origin property specifies the positioning area of the background
+        images.<br />
+        The background image can be placed within the content-box, padding-box, or
+        border-box area.</div>
+    </div>
+    
+    <div id="div3">
+        <p>background-origin:padding-box:</p>
+       
+        CSS3 The background-origin Property<br />
+        CSS3 Multiple Background Images
+        CSS3 allows you to use several background images for an element.
+        The background-origin property specifies the positioning area of the background
+        images.<br />
+        The background image can be placed within the content-box, padding-box, or
+        border-box area.
+    </div>
+</body>
+</html>
