@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+</head>
+<body>
+    <center>
+        <form name=zip onSubmit="return validateZIP(this.zip.value)">
+            Zip: <input type=text size=30 name=zip>
+            <input type=submit value="Submit">
+        </form>
+    </center>
+    
+    <p>
+        <center>
+            <font face="arial, helvetica" size="-2">Free JavaScripts provided<br>
+            by <a href="http://javascriptsource.com">The JavaScript Source</a>\
+            </font>
+        </center>
+    <p>
+
+        <SCRIPT LANGUAGE="JavaScript"> 
+        
+        //<!-- Original: Brian Swalwell -->
+        //<!-- This script and many more are available free online at -->
+       // <!-- The JavaScript Source!! http://javascript.internet.com -->
+       //<!-- Begin
+        function validateZIP(field) 
+        {
+            var valid = "0123456789-";
+            var hyphencount = 0;
+            if (field.length!=5 && field.length!=10) {
+            alert("Please enter your 5 digit or 5 digit+4 zip code.");
+            return false;
+            }
+            for (var i=0; i < field.length; i++) {
+            temp = "" + field.substring(i, i+1);
+            if (temp == "-") hyphencount++;
+            if (valid.indexOf(temp) == "-1") {
+            alert("Invalid characters in your zip code. Please try again.");
+            return false;
+            }
+            if ((hyphencount > 1) || ((field.length==10) && ""+field.charAt(5)!="-")) {
+            alert("The hyphen character should be used with a properly formatted 5 digit+four zip code, like '12345-6789'. Please try again.");
+            return false;
+            }
+            }
+            return true;
+            }
+            // End -->
+            </script>
+    
+</body>
+</html>

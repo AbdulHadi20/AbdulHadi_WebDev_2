@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+        var bannerimg = new arrimages();
+
+        bannerimg[0] = "image1.jpg";
+        bannerimg[1] = "image2.jpg";
+        bannerimg[2] = "image3.jpg";
+        bannerimg[3] = "image4.jpg";
+
+        var newBanner = 0
+        var totalBanner = bannerimg.length
+
+        function cycleban() {
+            newBanner++
+
+            if (newBanner == totalBanner) {
+                newBanner == 0
+            }
+
+            document.banner.src = bannerimg[newBanner]
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handlers Pt. 2</title>
+</head>
+<body onload="loaded = true;">
+    
+    <script type="text/Javascript">
+        var loaded = false;
+
+        function doit() 
+        {
+            alert('Everything is "loaded" and loaded = ' + loaded);
+        }
+
+
+    </script>
+
+    <form>
+        <input type="button" value="press me" onclick="if(loaded == true) doit();">
+    </form>
+</body>
+</html>
