@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+</head>
+<style>
+    .container {
+        border: 4px solid #008000;
+    }
+
+    .box1 {
+        display: grid;
+        grid-template-rows: 50px 50px 50px;
+        grid-template-columns: 75px 75px 75px 75px;
+    }
+
+    #item1 {
+        border: 2px solid #008000;
+        background-color: #9fd3e5;
+        text-align: left;
+        font-size: 18px;
+        padding: 15px;
+        margin: 10px;
+    }
+
+    #item2 {
+        border: 2px solid #008000;
+        background-color: #9fd3e5;
+        text-align: left;
+        font-size: 18px;
+        padding: 15px;
+        margin: 10px;
+    }
+</style>
+<body>
+    <h1>CSS Grid Placing Items</h1>
+
+    <div class="container">
+        <div class="box1">
+            <div id="item1">One</div>
+            <div id="item2">Two</div>
+            <div id="item2">Three</div>
+        </div>
+
+        <div class="box1">
+            <div id="item1">Four</div>
+            <div id="item2">Five</div>
+            <div id="item2">Six</div>
+        </div>
+
+        <div class="box1">
+            <div id="item1">Seven</div>
+            <div id="item2">Eight</div>
+            <div id="item2">Nine</div>
+        </div>
+
+        <div class="box1">
+            <div id="item1">Ten</div>
+            <div id="item2">Eleven</div>
+            <div id="item2">Twelve</div>
+        </div>
+    </div>
+    
+</body>
+</html>

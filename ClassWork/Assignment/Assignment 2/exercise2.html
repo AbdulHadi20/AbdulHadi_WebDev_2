@@ -1,0 +1,37 @@
+<!DOCTYPE html> <!--declaring the doctype, indicates the start of the document-->
+<html lang="en">
+<head> <!--contains the meta information and links to css files etc.-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title> <!--title displayed on title bar-->
+</head>
+<!--style tag for the internal css-->
+<style>
+    /*modifying the display of the container div*/
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box {
+        /*modifying th display of the coloumns inside the container div*/
+        background-color: #9fd3e5;
+        border: 3px solid #008000;
+        text-align: left;
+        font-size: 18px;
+        padding: 10px;
+    }
+</style>
+<body> <!--the body tag, contains all the code to be executed and displayed on the webpage-->
+    <h1>CSS Flexbox Wrapping</h1> <!--heading tag-->
+
+    <div class="container"> <!-- a div tag calling a class container-->
+        <div class="box">One</div> <!--child class box to place the divs inside the container div -->
+        <div class="box">Two</div>
+        <div class="box">Three</div>
+        <div class="box">Four</div>
+        <div class="box">Five</div>
+    </div>
+
+</body>
+</html>
