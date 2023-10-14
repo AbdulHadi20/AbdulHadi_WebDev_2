@@ -1,66 +1,63 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--start of the doc-->
 <html lang="en">
-<head>
+<head> <!--conatins the meta information-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 3</title>
-</head>
+    <title>Exercise 3</title> <!--title displayed on title bar-->
+</head> 
+<!--internal css-->
 <style>
-    .container {
-        border: 4px solid #008000;
-    }
 
-    .box1 {
+    /*setting the grids*/
+    #box1 {
         display: grid;
-        grid-template-rows: 50px 50px 50px;
-        grid-template-columns: 75px 75px 75px 75px;
+        grid-template-rows: 35px 35px 35px 35px;
+        grid-template-columns: 450px 450px 450px;
+        gap: 10px;
     }
-
-    #item1 {
+    
+    /*modifying the common boxes*/
+    .item {
         border: 2px solid #008000;
         background-color: #9fd3e5;
         text-align: left;
-        font-size: 18px;
-        padding: 15px;
-        margin: 10px;
+        font-size: 20px;
+        padding: 8px;
     }
 
-    #item2 {
-        border: 2px solid #008000;
-        background-color: #9fd3e5;
-        text-align: left;
-        font-size: 18px;
-        padding: 15px;
-        margin: 10px;
+    /*modifying the first box in the grid*/
+    .item-1 {
+        grid-row: 1 / 4;
+    }
+
+    /*modifying the box with text "six"*/
+    .item-2 {
+        grid-row: 4 / 6;
+        grid-column: 2 / 4;
+    }
+
+    /*modifying the box with "eight" text*/
+    .item-3 {
+        grid-row: 3 / 4;
+        grid-column: 2 / 4;
     }
 </style>
-<body>
-    <h1>CSS Grid Placing Items</h1>
-
-    <div class="container">
-        <div class="box1">
-            <div id="item1">One</div>
-            <div id="item2">Two</div>
-            <div id="item2">Three</div>
-        </div>
-
-        <div class="box1">
-            <div id="item1">Four</div>
-            <div id="item2">Five</div>
-            <div id="item2">Six</div>
-        </div>
-
-        <div class="box1">
-            <div id="item1">Seven</div>
-            <div id="item2">Eight</div>
-            <div id="item2">Nine</div>
-        </div>
-
-        <div class="box1">
-            <div id="item1">Ten</div>
-            <div id="item2">Eleven</div>
-            <div id="item2">Twelve</div>
-        </div>
+<body> <!--start of the body tag-->
+    <h1>CSS Grid Placing Items</h1> <!--heading tag-->
+    
+    <div id="box1"> <!--div with id box1, all the boxes are inside this div-->
+        <div class="item item-1">One</div> <!--creating multiple divs with class item-->
+        <div class="item">Two</div>
+        <div class="item">Three</div>
+        <div class="item">Four</div>
+        <div class="item">Five</div>
+        <div class="item item-2">Six</div>
+        <div class="item">Seven</div>
+        <div class="item item-3">Eight</div>
+        <div class="item">Nine</div>
+        <div class="item">Ten</div>
+        <div class="item">Eleven</div>
+        <div class="item">Twelve</div>
     </div>
     
 </body>
