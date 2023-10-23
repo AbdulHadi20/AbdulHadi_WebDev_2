@@ -1,46 +1,42 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--start of the html doc-->
 <html lang="en">
-<head>
+<head> <!--head tag, contains meta info and titles-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 4</title>
+    <title>Exercise 4</title> <!--displayed on title bar-->
 </head>
-<style>
+<style> /*style tag to code css internally*/
     h1 {
-        text-align: center;
+        text-align: center; /*setting the heading to center*/
     }
 
-    .cont {
+    .cont { /*setting the display of the outer div*/
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+        justify-content: left;
+        align-items: center;
     }
 
-    .boxes {
+    .cont div { /*setting the display of the child divs*/
         background-color: #9fd3e5;
         border: 2px solid #008000;
         padding: 0px;
         margin: 0px;
     }
 
-    .boxes-1 {
-        padding-bottom: 100px;
-    }
-
-    .boxes-2 {
-        margin-top: 30pxS;
+    .cont div:first-child{ /*in here, the first child div, is accessed and height gets increased*/
+        height: 200px;
     }
 
 </style>
-<body>
-    <h1>CSS Flexbos: Align Content (Cross Axis)</h1>
+<body> <!--body tag, all of the content is written here, that has to be displayed on the page-->
+    <h1>CSS Flexbos: Align Content (Cross Axis)</h1> <!--main heading -->
 
-    <div class="cont">
-        <div class="boxes boxes-1">One</div>
-        <div class="boxes boxes-2">Two</div>
-        <div class="boxes boxes-2">Three</div>
-        <div class="boxes boxes-2">Four</div>
-        <div class="boxes boxes-2">Five</div>
+    <div class="cont"> <!--div with class cont, parent div-->
+        <div class="box1">One</div> <!--child divs, everyone having their own class name-->
+        <div class="box2">Two</div>
+        <div class="box3">Three</div>
+        <div class="box4">Four</div>
+        <div class="box5s">Five</div>
     </div>
     
 </body>
