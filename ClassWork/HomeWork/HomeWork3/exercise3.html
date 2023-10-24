@@ -13,20 +13,22 @@
 
     .container {
         display: grid;
-        grid-template-columns: repeat(4, 50px);
-        grid-template-rows: repeat(3, 20px);
-        gap: 250px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        height: 450px;
+        justify-items: center;
+        align-items: center;
     }
 
     .container div {
         background-color: #9fd3e5;
         border: 2px solid #008000;
-        padding: 0px;
-        margin: 0px;
+        margin: 0;
+        padding: 0;
     }
 
     .two {
-        width: 100%
+        width: 100%;
     }
 
     .four {
@@ -38,7 +40,7 @@
     }
 
     .six {
-        justify-content: end;
+        align-items: end;
     }
 </style>
 <body>
