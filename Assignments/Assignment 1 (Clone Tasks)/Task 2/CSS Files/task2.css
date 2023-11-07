@@ -1,0 +1,15 @@
+header {
+    background-color: skyblue;
+    margin: 5px;
+    padding: 5px;
+}
+
+header .logo {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 40px;
+}
+
+header nav {
+    float: right;
+}
