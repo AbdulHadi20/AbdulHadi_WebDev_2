@@ -1,0 +1,30 @@
+$bgcolor: rgb(164, 198, 70);
+$textcolor: black;
+
+@mixin theme($t: yellow) {
+    background-color: $t;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    border: 1px;
+}
+
+.c1 {
+    @include theme;
+}
+
+.c2 {
+    @include theme($t: purple)
+}
+
+.c3 {
+    color: brown;
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: larger;
+    line-height: 5px;
+}
+
+.c4 {
+    color: blueviolet;
+    @extend .c3
+}

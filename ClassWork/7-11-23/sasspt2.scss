@@ -1,0 +1,11 @@
+@import 'sasspartial';
+
+.cont {
+
+    ul {
+        li {
+            background-color: $bgcolor;
+            color: $textcolor;
+        }
+    }
+}
