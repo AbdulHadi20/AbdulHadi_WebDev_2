@@ -10,6 +10,11 @@ header .logo {
     font-size: 40px;
 }
 
-header nav {
+nav {
     float: right;
+    margin: 0px;
+}
+
+section {
+    display: flex;
 }
