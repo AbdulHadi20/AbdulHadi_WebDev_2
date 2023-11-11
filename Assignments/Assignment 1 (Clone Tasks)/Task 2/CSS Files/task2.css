@@ -1,20 +1,53 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
 header {
-    background-color: skyblue;
-    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e90ff;
+    margin: 1px;
     padding: 5px;
 }
 
-header .logo {
-    font-family: Arial, Helvetica, sans-serif;
+h1 {
     color: #ffffff;
-    font-size: 40px;
+    text-align: left;
+    font-size: 30px;
+    padding: 0px 5px;
 }
 
-nav {
-    float: right;
-    margin: 0px;
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-block;
+    padding: 0px 20px;
+    
 }
 
-section {
+input {
+    width: 15%;
+    height: 40px;
+}
+
+.avengers {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #000000;
 }
+
+.avengers img {
+    width: 25%;
+    height: 25%;
+}
+
+
+
+
