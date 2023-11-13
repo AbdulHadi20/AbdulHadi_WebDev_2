@@ -34,20 +34,35 @@ input {
     height: 40px;
 }
 
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 .avengers {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    padding: 20px;
+    margin: 25px;
+    padding: 5px;
     border: 2px solid #000000;
 }
 
 .avengers img {
-    width: 25%;
+    width: 27%;
     height: 25%;
 }
 
+.caption {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 0;
+    margin: 10px;
+}
+
+.grp {
+    font-size: 12px;
+    margin: 10px;
+}
 
 
 
