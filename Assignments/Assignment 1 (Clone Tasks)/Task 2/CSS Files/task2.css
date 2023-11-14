@@ -36,7 +36,7 @@ input {
 
 .container {
     display: flex;
-    flex-direction: ;
+    flex-direction: row;
     align-items: center;
     width: 60vw;
 } 
@@ -45,10 +45,11 @@ input {
     border: 2px solid #000000;
 }
 
-/* .avengers img {
-    width: 27%;
+ img {
+    width: 35%;
     height: 25%;
-} */
+    /* object-fit: cover; */
+} 
 
 .caption {
     font-size: 17px;
@@ -58,7 +59,7 @@ input {
 }
 
 .grp {
-    font-size: 15px;
+    font-size: 11px;
     margin: 10px;
 }
 
