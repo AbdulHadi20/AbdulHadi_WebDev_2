@@ -36,18 +36,19 @@ input {
 
 .container {
     display: flex;
+    flex-direction: ;
     align-items: center;
-    justify-content: center;
+    width: 60vw;
 } 
 .avengers {
     margin: 5px;
     border: 2px solid #000000;
 }
 
-.avengers img {
+/* .avengers img {
     width: 27%;
     height: 25%;
-}
+} */
 
 .caption {
     font-size: 17px;
@@ -70,6 +71,10 @@ button {
     border-radius: 5px;
     border: none;
 }
+
+
+
+
 
 
 
