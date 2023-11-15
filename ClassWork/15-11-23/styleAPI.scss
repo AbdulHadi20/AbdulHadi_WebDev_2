@@ -1,0 +1,35 @@
+$wid: 100px;
+$hei: 100px;
+$bgcolor: blueviolet;
+$pos: relative;
+$side: 0;
+$spacing: 10px;
+
+.square1 {
+    width: $wid;
+    height: $hei;
+    position: $pos;
+    left: $side;
+    margin: $spacing;
+    background-color: $bgcolor;
+}
+
+.square2{
+    background-color: red;
+    @extend .square1
+}
+
+.square3 {
+    background-color: orange;
+    @extend .square1
+}
+.square4{
+    background-color: blue;
+    @extend .square1
+}
+.square5{
+    background-color: green;
+    @extend .square1
+}
+
+

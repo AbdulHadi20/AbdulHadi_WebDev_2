@@ -38,7 +38,7 @@ input {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 60vw;
+    width: 10%;
 } 
 .avengers {
     margin: 5px;
