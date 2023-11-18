@@ -34,32 +34,31 @@ input {
     height: 40px;
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 10%;
+#container {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    margin: auto;
+    width: 70%;
+    gap: 15px;
+    margin-top: 7px;
 } 
-.avengers {
-    margin: 5px;
-    border: 2px solid #000000;
-}
 
- img {
-    width: 35%;
-    height: 25%;
-    /* object-fit: cover; */
+img {
+    width: 100%;
+    justify-content: center;
+    object-fit: cover;
 } 
 
 .caption {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: bold;
     padding: 0;
     margin: 10px;
 }
 
 .grp {
-    font-size: 11px;
+    font-size: 15px;
     margin: 10px;
 }
 
@@ -68,14 +67,23 @@ button {
     background-color: #1e90ff;
     color: #ffffff;
     padding: 10px;
-    margin: 0;
+    margin: 10px;
+    margin-top: 80px;
     border-radius: 5px;
     border: none;
 }
 
+.avengers, .smallboxes {
+    border: 1px solid #00000018;
+    box-shadow: 3px 4px 6px #00000052;
+}
 
-
-
-
+.smallboxes {
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: space-between; */
+    /* align-content: space-between; */
+    /* flex-wrap: wrap; */
+}
 
 
