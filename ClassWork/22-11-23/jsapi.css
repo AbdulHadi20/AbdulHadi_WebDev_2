@@ -1,0 +1,24 @@
+.square {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    left: 0;
+}
+
+.square2 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 0;
+}
+
+.square3 {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    left: 0;
+}
+
+div {
+    margin: 10px;
+}
