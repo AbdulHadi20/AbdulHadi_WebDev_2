@@ -14,6 +14,9 @@ $rad1: 100px; /*largest circle width*/
 $rad2: 90px; /*large circle width*/
 $rad3: 80px; /*medium circle width*/
 $rad4: 70px; /*smallest circle width*/
+$mediawidth: 0px; /*initialized the screen width to zero*/
+$widthfor300px: 620px; /*screen width for the image of 300px dimensions*/
+$widthfor200px: 480px; /*screen width for the image of 200px dimensions*/
 
 /*creating a mixin function, to centralize the content*/
 @mixin centeritems() {
@@ -132,10 +135,6 @@ footer {
     margin-top: 50px;
     margin-bottom: 0;
 }
-
-$mediawidth: 0px; /*initialized the screen width to zero*/
-$widthfor300px: 620px; /*screen width for the image of 300px dimensions*/
-$widthfor200px: 480px; /*screen width for the image of 200px dimensions*/
 
 /*creating a mixin function to handle the media queries*/
 @mixin mediaquery($screenwidth: $mediawidth) {
