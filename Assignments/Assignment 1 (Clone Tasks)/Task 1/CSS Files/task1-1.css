@@ -1,20 +1,24 @@
+/*setting the body of the page*/
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #f0eaea;
+    margin: 0; /*sets margin to zero, for the whole page*/
+    padding: 0; /*sets padding to zero, again, for the whole page*/
+    background-color: #f0eaea; /*background color is white (not exactly white, but close)*/
 }
 
+/*setting the dispaly for the header*/
 header {
-    background-color: #ffffff;
-    padding: 10px;
+    background-color: #ffffff; /*background color, white*/ 
+    padding: 10px; /*padding, set to 10px*/
 }
 
+/*setting the margin, height and width for the image in the header tag, (aka, the logo image)*/
 header img {
     margin: 7px;
     height: 60px;
     width: 60px;
 }
 
+/*setting the display for the paragraph tag throughout the webpage*/
 p {
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
@@ -22,26 +26,33 @@ p {
     padding: 10px;
 }
 
+/*setting the display for the images in the webpage, in the div with the class named images*/
 .images {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    display: grid; /*displaying the images as a grid*/
+    grid-template-columns: repeat(3, 1fr); /*there are three coloumns, so each column takes equal space within the 100% width*/
+    grid-template-rows: repeat(2, 1fr); /*2 rows, so both rows also take equal space*/
 }
 
+/*setting the images in the div class images*/
 .images img {
     width: 100%;
     height: 100%;
 }
 
+
+/*setting the display for the footer*/
 footer {
-    text-align: center;
-    padding: 30px;
-    background-color: #000000;
-    color: #ffffff;
+    text-align: center; /*aligns the text in the center*/
+    padding: 30px; /*sets the padding to 30px*/
+    background-color: #000000; /*background color for the footer is set to black*/
+    color: #ffffff; /*text color is white*/
 
 }
 
+/*setting up the webpage, to make it responsive, suitable for several devices*/
+/*setting the suitable display, if the width is atleast 1024px*/
 @media (min-width: 1024px) {
+    /**/
     .center {
         margin: auto;
         width: 1024px;

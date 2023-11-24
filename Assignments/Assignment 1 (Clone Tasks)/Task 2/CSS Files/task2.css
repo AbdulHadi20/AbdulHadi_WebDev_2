@@ -101,21 +101,14 @@ footer {
     #container {
         margin: auto;
         width: 60%;
-
     }
 
 }
 
 @media (max-width: 1280px) {
-    body{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
     #container {
-        margin: 10px;
-        width: 100%;
-        
+        margin: auto;
+        width: 95%;
     }
 }
 
@@ -150,6 +143,10 @@ footer {
         width: 100%;
         height: fit-content;
     }
+
+    .grp {
+        font-size: 17px;
+    }
     
 }
 
@@ -162,6 +159,10 @@ footer {
         display: flex;
         flex-direction: column;
         width: 100%;
+    }
+
+    .grp {
+        font-size: 19px;
     }
 
 }
