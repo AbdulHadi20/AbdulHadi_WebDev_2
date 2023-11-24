@@ -1,3 +1,5 @@
+/*start of the styling document for task 1*/
+
 /*setting the body of the page*/
 body {
     margin: 0; /*sets margin to zero, for the whole page*/
@@ -52,34 +54,41 @@ footer {
 /*setting up the webpage, to make it responsive, suitable for several devices*/
 /*setting the suitable display, if the width is atleast 1024px*/
 @media (min-width: 1024px) {
-    /**/
+    /*if the width is atleast 1024px, then this will be executed*/
     .center {
         margin: auto;
         width: 1024px;
     }
 }
 
+/*setting the display if the width not more than 1024px*/
 @media (max-width: 1024px) {
+    /*we just need the content to take all the space now, so we do not need the main div with class center anymore*/
     .images {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        display: grid; /*display se to grid*/
+        grid-template-columns: repeat(3, 1fr); /*three coloumns*/
+        grid-template-rows: repeat(2, 1fr); /*two rows*/
     }
 }
 
+/*setting if the width is not more than 800px*/
 @media (max-width: 800px) {
+    /*here, we just switch the number of rows and columns, since this setting would be more accurate on a tablet*/
     .images {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        display: grid; /*display set to grid*/
+        grid-template-columns: repeat(2, 1fr); /*two coloumns*/
+        grid-template-rows: repeat(3, 1fr); /*three rows*/
     }
 }
 
+/*setting if the width is no more than 480px*/
 @media (max-width: 480px) {
+    /*again, we just need to set for the accurate display on a mobile phone*/
     .images {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(6, 1fr);
+        display: grid; /*display set to grid*/
+        grid-template-columns: repeat(1, 1fr); /*one coloumn*/
+        grid-template-rows: repeat(6, 1fr); /*six rows*/
     }
 }
 
+/*end of the styling document*/

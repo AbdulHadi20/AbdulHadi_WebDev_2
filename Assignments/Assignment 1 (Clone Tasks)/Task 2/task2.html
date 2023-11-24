@@ -1,46 +1,57 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--start of the html document-->
 <html lang="en">
-<head>
+<head> <!--the head tag, contains meta information and the links to external files-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS Files/task2.css">
-    <title>Task 2: Flexbox</title>
+    <link rel="stylesheet" href="CSS Files/task2.css"> <!--links to external css file for the task 2-->
+    <title>Task 2: Flexbox</title> <!--title to be displayed on the title bar-->
 </head>
-<body>
-    <header>
-        <h1>What's On</h1>
-        <input type="text" value="Search...">
-        <nav>
-            <a href="#">Movies</a>
-            <a href="#">TV</a>
-            <a href="#">Login</a>
-            <a href="#">Register</a>
+<body> <!--start of the body tag, contains all the content that has to be displayed on the webapge-->
+    <header> <!--the header tag, has the information that gets displayed on the top of the page-->
+        <h1>What's On</h1> <!--heading 1, the largest one amongst the six of them-->
+        <input type="text" value="Search..."> <!--input type, lets the user type in information-->
+        <nav> <!--the nav bar, has the links to the other pages to the website-->
+            <a href="#">Movies</a> <!--link to the movies page-->
+            <a href="#">TV</a> <!--link to the TV page-->
+            <a href="#">Login</a> <!--link to the Login page-->
+            <a href="#">Register</a> <!--link to the Register page-->
         </nav>
+        <div class = "Menu">Menu</div> <!--the menu text, is hidden in the start, but gets displayed when width is less than 800px-->
+
     </header>
 
-    <div id="container">
-        <div class="avengers">
-            <img src="Assets/avengers.jpg" alt="">
-            <p class = "caption">Avengers - Endgame</p>
-            <p class="grp">
+    <div id="container"> <!--the main div, will be used to center all the content on a webpage with width more than 1280px-->
+        <div class="avengers"> <!--the child div, has the content for the avengers -->
+            <img src="Assets/avengers.jpg" alt=""> <!--image tag with the avengers photo-->
+            <p class = "caption">Avengers - Endgame</p> <!--paragraph tag, but used as caption-->
+            <p class="grp"> <!--paragraph tag, with an actual paragraph-->
                 After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of
                 remaining allies, the Avengers assemble once more in order to reverse Thanos's actions and restore 
                 balance to the universe.  
-                <button>More Info...</button>
+                <button>More Info...</button> <!--button tag-->
             </p>
         </div>
 
-        <div class="smallboxes">
-            <div class="lonegunmen">
-                <img src="Assets/lone-gunmen.jpg" alt="">
-                <p class="caption">The Lone Gunmen</p>
-                <p class="grp">
+        <div class="smallboxes"> <!--a child div, consisting of other four smaller divs-->
+            <div class="lonegunmen"> <!--grandchild div 1-->
+                <img src="Assets/lone-gunmen.jpg" alt=""> <!--image tag-->
+                <p class="caption">The Lone Gunmen</p> <!--paragraph tag, used as caption-->
+                <p class="grp"> <!--paragraph tag-->
                     The X-Files' Lone Gunmen, investigate crimes and conspiracies, often in a silly, comedic and over the top fashion.
+                </p>
+                <button>More Info...</button> <!--button tag-->
+            </div>
+
+            <div class="millenium"> <!--grandchild div 3-->
+                <img src="Assets/millenium.jpg" alt="">
+                <p class="caption">Millenium Triology</p>
+                <p class="grp">
+                    The adventures of journalist Mikael Bloomwist and hacker Lisabeth Slander.
                 </p>
                 <button>More Info...</button>
             </div>
 
-            <div class="predators">
+            <div class="predators"> <!--grandchild div 2-->
                 <img src="Assets/predators.jpg" alt="">
                 <p class="caption">Predators</p>
                 <p class="grp">
@@ -50,16 +61,7 @@
                 <button>More Info...</button>
             </div>
 
-            <div class="millenium">
-                <img src="Assets/millenium.jpg" alt="">
-                <p class="caption">Millenium Triology</p>
-                <p class="grp">
-                    The adventures of journalist Mikael Bloomwist and hacker Lisabeth Slander.
-                </p>
-                <button>More Info...</button>
-            </div>
-
-            <div class="rage">
+            <div class="rage"> <!--grandchild div 4-->
                 <img src="Assets/rage.jpg" alt="">
                 <p class="caption">Rage</p>
                 <p class="grp">
@@ -72,9 +74,11 @@
 
     </div>
 
-    <footer>
+    <footer> <!--footer tag, on the bottom of the page-->
         Copyright © 2021 What's On
     </footer>
     
 </body>
 </html>
+
+<!--end of the html document-->

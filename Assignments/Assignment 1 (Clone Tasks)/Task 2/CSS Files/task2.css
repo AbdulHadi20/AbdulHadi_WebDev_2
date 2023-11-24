@@ -1,169 +1,222 @@
+/*start of the css file for task 2*/
+
+/*setting the body's font family, bg color etc.*/
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
-    margin: 0;
-    padding: 0;
-    word-wrap: break-word;
+    font-family: Arial, Helvetica, sans-serif; /*sets the font family*/
+    background-color: #ffffff; /*background color set to white*/
+    margin: 0; /*margin set to none/zero */
+    padding: 0; /*padding set to none/zero*/
+    word-wrap: break-word; /*breaks the word to the next line if there's no more space*/
 }
 
+/*setting the display for the header section*/
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1e90ff;
-    margin: 1px;
+    display: flex; /*display set to flex*/
+    justify-content: space-between; /*equal space horizontaly between all the elements in the header section*/
+    align-items: center; /*aligns all the items to the center, vertically as well*/
+    background-color: #1e90ff; /*bg color to blue (somehat)*/
+    margin: 1px; 
     padding: 5px;
 }
 
-h1 {
-    color: #ffffff;
-    text-align: left;
-    font-size: 30px;
-    padding: 0px 5px;
+/*setting the div container in the header section*/
+header div {
+    display: none; /*set to none, as the width is more than 800px*/
+    color: #ffffff; /*text color is white*/
 }
 
+/*heading settings*/
+h1 {
+    color: #ffffff; /*text color is white*/
+    text-align: left; /*aligned to the left*/
+    font-size: 30px; /*text size*/
+    padding: 0px 5px; /*padding for the heading 1*/
+}
+
+/*setting the nav tag links*/
 nav a {
-    text-decoration: none;
-    color: #ffffff;
-    display: inline-block;
-    padding: 0px 20px;
+    text-decoration: none; /*just plain text, nothing fancy*/
+    color: #ffffff; /*text color, white*/
+    display: inline-block; /*display set to inline block, gets displayed horizontally instead of verticaly*/
+    padding: 0px 20px; /*padding settings for the nav bar links*/
     
 }
 
+/*settings for the input box*/
 input {
-    width: 15%;
-    height: 40px;
+    width: 15%; /*width settings*/
+    height: 40px; /*height settings*/
 }
 
+/*setting the display for all the content in the page*/
 #container {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    width: 80%;
-    gap: 20px;
+    display: flex; /*display set to flex*/
+    justify-content: center; /*places all the content in the center*/
+    margin: auto; /*margin is automatic*/
+    width: 80%; /*takes up 80% of the width of the screen*/
+    gap: 20px; /*gap between the boxes set to 20px*/
 }
 
+/*setting the images for all the boxes*/
 img {
-    width: 100%;
-    justify-content: center;
-    object-fit: cover;
+    width: 100%; /*fits completely*/
+    justify-content: center; /*in the center*/
+    object-fit: cover; /*covers the designated spaces*/
 } 
 
+/*p tag, with class caption, settings*/
 .caption {
-    font-size: 18px;
-    font-weight: bold;
-    padding: 0;
-    margin: 10px;
+    font-size: 18px; /*text size*/
+    font-weight: bold; /*text type*/
+    padding: 0; /*no padding*/
+    margin: 10px; /*10px margin*/
 }
 
+/*sets the actual paragraphs in the webpage*/
 .grp {
     font-size: 15px;
     margin: 10px;
 }
 
+/*settings for all the buttons on the page*/
 button {
-    float: right;
-    background-color: #1e90ff;
-    color: #ffffff;
-    padding: 10px;
+    float: right; /*placed on the right side of the containers (divs)*/
+    background-color: #1e90ff; /*bg color for the buttons*/
+    color: #ffffff; /*text color in the button*/
+    padding: 10px; /*padding and margin set to 10px*/
     margin: 10px;
     margin-top: 20%;
-    border-radius: 5px;
-    border: none;
+    border-radius: 5px; /*curves 5px*/
+    border: none; /*no borders*/
 }
 
-.avengers, .smallboxes, .lonegunmen, .predators, .millenium, .rage {
-    border: 1px solid #00000018;
-    box-shadow: 3px 4px 6px #00000052;
+/*shadow settings for all the child/grandchild divs*/
+.avengers, .lonegunmen, .predators, .millenium, .rage {
+    border: 1px solid #00000018; /*border color*/
+    box-shadow: 3px 4px 6px #00000052; /*shadow color*/
 
 }
 
+/*setting for the child div, with class avengers*/
 .avengers { 
-    width: calc(118%);
-    height: fit-content;
+    width: calc(118%); /*width, used calc function, as i needed to have it more width than 100%*/
+    height: fit-content; /*height is set according to the content inside*/
 }
+
+/*setting the display for the grandchild divs*/
 .smallboxes {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: grid; /*display set to grid*/
+    grid-template-columns: repeat(2, 1fr); /*has two rows and coloumns respectively*/
     grid-template-rows: repeat(2, 1fr);
-    width: 100%;
-    height: fit-content;
+    width: 100%; /*all the width is taken*/
+    height: fit-content; /*height depends on the contnent*/
     gap: 20px;
 }
 
+/*setting the footer*/
 footer {
-    text-align: center;
-    margin-top: 50px;
+    text-align: center; /*text in the center*/
+    margin-top: 50px; /*margins top and bottom to 50px*/
+    margin-bottom: 50px;
 
 }
 
+/*media queries*/
+
+/*if width is more than 1281px*/
 @media (min-width: 1281px) {
     #container {
-        margin: auto;
-        width: 60%;
-    }
-
+        margin: auto; /*auto margin adjusting*/
+        width: 60%; /*takes the 60% of the width on the screen*/
+    } 
 }
 
+/*if width is no more than 1280px*/
 @media (max-width: 1280px) {
     #container {
         margin: auto;
-        width: 95%;
+        width: 95%; /*takes up 95% of the width on the screen*/
     }
 }
 
+/*if width is no more than 1024px*/
 @media (max-width: 1024px) {
     #container {
         margin: auto;
-        width: 95%;
-    }
-
-    .smallboxes {
-        display: grid;
-        width: 40%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-    }
-}
-
-@media (max-width: 800px) {
-    #container {
-        display:flex;
-        flex-direction: column;
-    }
-
-    .avengers {
-        width: auto;
-    }
-
-    .smallboxes {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        width: 100%;
-        height: fit-content;
-    }
-
-    .grp {
-        font-size: 17px;
+        width: 95%; /*takes up 95% of the width*/
     }
     
+    .smallboxes {
+        display: flex; /*display set to flex*/
+        flex-direction: column; /*all the child divs in .smallboxes div are displayed vertically*/
+        width: 40%;
+    }
 }
 
-@media (max-width: 480px) {
+/*if width is no more than 800px, tablet mode*/
+@media (max-width: 800px) {
+    #container {
+        display:flex; /*display set to flex*/
+        flex-direction: column; /*displayed verically*/
+    }
+
     .avengers {
-        width: fit-content;
+        width: auto; /*auto width adjustment for the avengers div*/
     }
 
     .smallboxes {
-        display: flex;
-        flex-direction: column;
+        display: grid; /*display set to grid*/
+        grid-template-columns: repeat(2, 1fr); /*two rows and coloums*/
+        grid-template-rows: repeat(2, 1fr);
         width: 100%;
+        height: fit-content; /*height depends on the content in the divs*/
+    }
+
+    input {
+        display: none; /*hides the input textbox*/
     }
 
     .grp {
-        font-size: 19px;
+        font-size: 17px; /*increased font size*/
+    }
+
+    header div {
+        display: block; /*displaying the menu text*/
+    }
+
+    nav {
+        display: none; /*hiding the nav bar*/
+    }
+}
+
+/*if width is no more than 480px*/
+@media (max-width: 480px) {
+    .avengers {
+        width: fit-content; /*width, according to the content, or the screen*/
+    }
+
+    .smallboxes {
+        display: flex; /*display set to flex*/
+        flex-direction: column; /*displayed vertically*/
+        width: 100%; /*100% width usable*/
+    }
+
+    input {
+        display: none; /*hides the input textbox*/
+    }
+
+    .grp {
+        font-size: 19px; /*increased font size*/
+    }
+
+    header div {
+        display: block; /*displays the menu text*/
+    }
+
+    nav {
+        display: none; /*hides the nav bar*/
     }
 
 }
 
+/*end of the css file for task 2*/

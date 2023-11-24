@@ -1,0 +1,151 @@
+/*start of the scss file*/
+/*setting thr colors, images, etc, for scss that would be used repeatedly*/
+/*for background color, header and footer*/
+/*color when the mouse is hovered onto the circles and rectangles*/
+/*color for rectangle 1, circle 1*/
+/*color for rectangle 2, circle 2*/
+/*color for rectangle 3, circle 3*/
+/*color for rectangle 4, circle 4*/
+/*image url for the largest, 400x400*/
+/*image url for the mid one, 300x300*/
+/*image url for the smallest, 200x200*/
+/*largest circle width*/
+/*large circle width*/
+/*medium circle width*/
+/*smallest circle width*/
+/*creating a mixin function, to centralize the content*/
+/*body settings*/
+body {
+  padding: 0; /*margin and padding set to zero*/
+  margin: 0;
+  background-color: #e4eff1; /*background color (idk the color name), calling it seawhite?*/
+}
+
+/*header settings*/
+header {
+  background-color: #8ccff7; /*color set to light color*/
+  width: 100%; /*takes all the width*/
+  display: flex; /*display set to flex*/
+  justify-content: center; /*places items in center horizontally*/
+  align-items: center; /*places items in center vertically*/
+}
+
+/*setting the image*/
+.image {
+  background-image: url(../Assets/400.png); /*url of the image*/
+  width: 400px; /*width and height for the image*/
+  height: 400px;
+}
+
+/*setting the rectangles*/
+.rects {
+  margin-top: 35px; /*distance between the image and the rectangles*/
+  display: flex; /*display set to flex*/
+  flex-direction: column; /*sets the rows vertically*/
+  width: 100%; /*takes all the width of the screen*/
+}
+
+/*size of the rectangles, accurately saying, the padding*/
+.rects div {
+  padding: 25px;
+}
+
+/*creating mixin function that sets the background color for the rectangles and circles*/
+/*for the first rectangle and circle*/
+#one, #small {
+  background-color: #4e89ae;
+}
+
+/*for the second rectangle and circle*/
+#two, #medium {
+  background-color: #43658b;
+}
+
+/*for the third rectangle and circle*/
+#three, #big {
+  background-color: #ed6663;
+}
+
+/*for the fourth rectangle and circle*/
+#four, #enormous {
+  background-color: #ffa372;
+}
+
+/*setting up the circles*/
+.circlesss {
+  margin-top: 30px; /*distance between the rectangles and cirles*/
+  gap: 40px; /*gap between each circle*/
+  display: flex; /*display set to flex*/
+  display: flex; /*display set to flex*/
+  justify-content: center; /*places items in center horizontally*/
+  align-items: center; /*places items in center vertically*/
+}
+
+/*setting the radius for all the circles*/
+.circlesss div {
+  border-radius: 100%;
+}
+
+/*creating a mixin function to set the widths of the circle*/
+/*for the smallest circle*/
+#small {
+  width: 70px; /*the width and height will be determined when i add the perimeters in the brackets*/
+  height: 70px;
+}
+
+/*for the medium circle*/
+#medium {
+  width: 80px; /*the width and height will be determined when i add the perimeters in the brackets*/
+  height: 80px;
+}
+
+/*for the big circle*/
+#big {
+  width: 90px; /*the width and height will be determined when i add the perimeters in the brackets*/
+  height: 90px;
+}
+
+/*for the enormous circle*/
+#enormous {
+  width: 100px; /*the width and height will be determined when i add the perimeters in the brackets*/
+  height: 100px;
+}
+
+/*setting the background color on hovering the mouse*/
+#one:hover, #two:hover, #three:hover, #four:hover, #small:hover, #medium:hover, #big:hover, #enormous:hover {
+  background-color: #444;
+}
+
+/*setting the footer*/
+footer {
+  background-color: #8ccff7;
+  height: 50px;
+  margin-top: 50px;
+}
+
+@media (max-width: 620px) {
+  .image {
+    background-image: url(../Assets/300.png);
+    width: 300px;
+    height: 300px;
+  }
+  .circlesss {
+    flex-direction: column;
+    display: flex; /*display set to flex*/
+    justify-content: center; /*places items in center horizontally*/
+    align-items: center; /*places items in center vertically*/
+  }
+}
+@media (max-width: 480px) {
+  .image {
+    background-image: url(../Assets/200.png);
+    width: 200px;
+    height: 200px;
+  }
+  .circlesss {
+    flex-direction: column;
+    display: flex; /*display set to flex*/
+    justify-content: center; /*places items in center horizontally*/
+    align-items: center; /*places items in center vertically*/
+  }
+}/*# sourceMappingURL=task3.css.map */

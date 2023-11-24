@@ -1,0 +1,175 @@
+/*start of the scss file*/
+
+/*setting thr colors, images, etc, for scss that would be used repeatedly*/
+$bgcolor: #8ccff7; /*for background color, header and footer*/
+$hovercolor: #444; /*color when the mouse is hovered onto the circles and rectangles*/
+$cirow-color-1: #4e89ae; /*color for rectangle 1, circle 1*/
+$cirow-color-2: #43658b; /*color for rectangle 2, circle 2*/
+$cirow-color-3: #ed6663; /*color for rectangle 3, circle 3*/
+$cirow-color-4: #ffa372; /*color for rectangle 4, circle 4*/
+$largeimg: url(../Assets/400.png); /*image url for the largest, 400x400*/ 
+$medimg: url(../Assets/300.png); /*image url for the mid one, 300x300*/ 
+$smolimg: url(../Assets/200.png); /*image url for the smallest, 200x200*/ 
+$rad1: 100px; /*largest circle width*/
+$rad2: 90px; /*large circle width*/
+$rad3: 80px; /*medium circle width*/
+$rad4: 70px; /*smallest circle width*/
+
+/*creating a mixin function, to centralize the content*/
+@mixin centeritems() {
+    display: flex; /*display set to flex*/
+    justify-content: center; /*places items in center horizontally*/
+    align-items: center; /*places items in center vertically*/
+}
+
+/*body settings*/
+body {
+    padding: 0; /*margin and padding set to zero*/
+    margin: 0; 
+    background-color: #e4eff1; /*background color (idk the color name), calling it seawhite?*/
+}
+
+/*header settings*/
+header {
+    background-color: $bgcolor; /*color set to light color*/
+    width: 100%; /*takes all the width*/
+    @include centeritems() /*using include to call the mixin function*/
+}
+
+/*setting the image*/
+.image {
+    background-image: url(../Assets/400.png); /*url of the image*/
+    width: 400px; /*width and height for the image*/
+    height: 400px;
+}
+
+/*setting the rectangles*/
+.rects {
+    margin-top: 35px; /*distance between the image and the rectangles*/
+    display: flex; /*display set to flex*/
+    flex-direction: column; /*sets the rows vertically*/
+    width: 100%; /*takes all the width of the screen*/
+}
+
+/*size of the rectangles, accurately saying, the padding*/
+.rects div {
+    padding: 25px;
+}
+
+/*creating mixin function that sets the background color for the rectangles and circles*/
+@mixin backcolor($bcolor: $cirow-color-1) {
+    background-color: $bcolor;
+}
+
+/*for the first rectangle and circle*/
+#one, #small {
+    @include backcolor() /*the brackets are empty as the function already has the color predefined*/
+}
+
+/*for the second rectangle and circle*/
+#two, #medium {
+    @include backcolor($cirow-color-2) /*color set to some kind of blue*/
+}
+
+/*for the third rectangle and circle*/
+#three, #big {
+    @include backcolor($cirow-color-3) /*color set to light red*/
+}
+
+/*for the fourth rectangle and circle*/
+#four, #enormous {
+    @include backcolor($cirow-color-4) /*color set to orange*/
+}
+
+/*setting up the circles*/
+.circlesss {
+    margin-top: 30px; /*distance between the rectangles and cirles*/
+    gap: 40px; /*gap between each circle*/
+    display: flex; /*display set to flex*/
+    @include centeritems() /*calling the mixin function to center the circles*/
+}
+
+/*setting the radius for all the circles*/
+.circlesss div {
+    border-radius: 100%; 
+}
+
+/*creating a mixin function to set the widths of the circle*/
+@mixin cirradi($circle-radi: $rad1) {
+    width: $circle-radi; /*the width and height will be determined when i add the perimeters in the brackets*/
+    height: $circle-radi;
+}
+
+/*for the smallest circle*/
+#small {
+    @include cirradi($rad4) /*sizr set to 70px*/
+}
+
+/*for the medium circle*/
+#medium {
+    @include cirradi($rad3) /*size set to 80px*/
+}
+
+/*for the big circle*/
+#big {
+    @include cirradi($rad2) /*size set to 90px*/
+}
+
+/*for the enormous circle*/
+#enormous {
+    @include cirradi($rad1) /*size set to 100px*/
+}
+
+/*setting the background color on hovering the mouse*/
+#one:hover, #two:hover, #three:hover, #four:hover, #small:hover, #medium:hover, #big:hover, #enormous:hover {
+    background-color: $hovercolor;
+}
+
+/*setting the footer*/
+footer {
+    background-color: $bgcolor; 
+    height: 50px; /*height and margin-top set to 50px*/
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+$mediawidth: 0px; /*initialized the screen width to zero*/
+$widthfor300px: 620px; /*screen width for the image of 300px dimensions*/
+$widthfor200px: 480px; /*screen width for the image of 200px dimensions*/
+
+/*creating a mixin function to handle the media queries*/
+@mixin mediaquery($screenwidth: $mediawidth) {
+    width: $screenwidth; /*initially, it is zero, but when the parameters are passed inside the brackets, that becomes the width*/
+}
+
+/*media to handle if width is no more than 620px*/
+@media (max-width) {
+    @include mediaquery($widthfor300px); /*calling the mixin function and passing required parameters*/
+    .image {
+        background-image: $medimg; /*the medium image*/
+        width: 300px; /*width and height set to 300px*/
+        height: 300px;
+    }
+
+    .circlesss {
+        flex-direction: column; /*circles are displayed vertically*/
+        @include centeritems() /*calling the function to centerize the circles*/
+    }
+}
+
+/*media to handle if width is no more than 480px*/
+@media (max-width) {
+    @include mediaquery($widthfor200px);  /*calling the mixin function and passing required parameters*/
+    .image {
+        background-image: $smolimg; /*the small image*/
+        width: 200px; /*width and height set to 200px*/
+        height: 200px;
+    }
+
+    .circlesss {
+        flex-direction: column; /*circles are displayed vertically*/
+        @include centeritems() /*calling the function to centerize the circles*/
+    }
+}
+
+/*end of the scss file for task 3*/
