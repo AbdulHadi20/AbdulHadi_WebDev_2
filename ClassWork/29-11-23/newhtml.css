@@ -1,0 +1,10 @@
+body {
+    background-color: cadetblue;
+}
+
+.square, .square2, .square3 {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    left: 0;
+}
