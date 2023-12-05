@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="apijsp5.css">
     <title>Document</title>
 </head>
 <body>
+
     <div class="parent">
         <div class="div1"> </div>
         <div class="div2"> </div>
@@ -17,6 +19,19 @@
         <div class="div8"> </div>
         <div class="div9"> </div>
     </div>
+
+    <div class="controls">
+        <button class="play" onclick="squares">Play</button>
+        <button class="pause">Pause</button>
+        <button class="restart">Restart</button>
+        <button class="reverse">Reverse</button>
+    </div>
+
+    <div class="time_controls">
+        <input class="timestamp"></input>
+        <input type="range" class="scroller" value="0" step="1" min="0" max="100"></input>
+    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" 
     integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" 

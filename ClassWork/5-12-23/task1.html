@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .square, .square2, .square3 {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            left: 0;
+            margin: 10px;
+            border-radius: 0%;
+        }
+        .square{
+            background-color: blue;
+        }
+        .square2{
+            background-color: red;
+        }
+        .square3{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="square"></div>
+    <div class="square2"></div>
+    <div class="square3"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <div class="controls">
+        <button class="play">Play</button>
+        <button class="pause">Pause</button>
+        <button class="restart">Restart</button>
+        <button class="reverse">Reverse</button>
+
+        <div class="time-controls">
+            <input class="timestamp">
+            <input class="scroller" type="range" value="0" step="1" min="0" max="100"></div>
+    </div>
+
+    <script>
+        const squares = anime({
+            targets: ['.square','.square2','.square3'],
+            borderRadius: '50%',
+            translateX:  200,
+            left: 600,
+            duration: 6000,
+            easing: 'linear',
+            backgroundColor: "#ff00ff",
+        })
+
+
+        document.querySelector('.play').onclick = squares.play
+        document.querySelector('.pause').onclick = squares.pause
+        document.querySelector('.restart').onclick = squares.restart
+        document.querySelector('.reverse').onclick = squares.reverse
+
+        const getTimestamp = document.querySelector('.timestamp')
+
+        getTimestamp.oninput = function () {
+            squares.seek(getTimestamp.value)
+        }
+
+        const getScroller = document.querySelector('.scroller')
+
+        getScroller.oninput = function () {
+            squares.seek(squares.duration * (getScroller.value / 100))
+        }
+    </script>
+</body>
+</html>
